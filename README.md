@@ -20,13 +20,15 @@ Built with **Provider**, **Material 3**, and **Flutter Best Practices** — with
 
 > Create a folder named **screenshots** in the project root and place your images there.
 
-| Light Theme                     | Dark Theme                     |
-|---------------------------------|--------------------------------|
-| ![](screenshots/light-home.png) | ![](screenshots/dark-home.png) |
+### ☀️ Light Theme
+|           Add Subject            |               Subject List               |               Summary               |
+|:--------------------------------:|:----------------------------------------:|:-----------------------------------:|
+| ![](screenshots/light-home.jpeg) | ![](screenshots/light-subject-list.jpeg) | ![](screenshots/light-summary.jpeg) |
 
-| Add Subject                      | Subject List                      | Summary                      |
-|----------------------------------|-----------------------------------|------------------------------|
-| ![](screenshots/add-subject.png) | ![](screenshots/subject-list.png) | ![](screenshots/summary.png) |
+### 🌙 Dark Theme
+|           Add Subject           |              Subject List               |              Summary               |
+|:-------------------------------:|:---------------------------------------:|:----------------------------------:|
+| ![](screenshots/dark-home.jpeg) | ![](screenshots/dark-subject-list.jpeg) | ![](screenshots/dark-summary.jpeg) |
 
 ---
 
