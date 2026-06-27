@@ -1,50 +1,50 @@
 import 'package:flutter/material.dart';
 
-/// Fully custom Material 3 light theme.
-///
-/// Every visual aspect (colors, app bar, cards, inputs, text, buttons,
-/// bottom navigation) is explicitly defined here so that widgets never
-/// need to hardcode colors — they simply read from `Theme.of(context)`.
-class LightTheme {
-  LightTheme._();
+/// Fully custom Material 3 dark theme. Mirrors [LightTheme] but with a
+/// dark, low-luminance palette. No widget should ever need to reach for
+/// a hardcoded color — everything routes through this ThemeData.
+class DarkTheme {
+  DarkTheme._();
 
-  static const Color _primary = Color(0xFF6750A4);
-  static const Color _onPrimary = Colors.white;
-  static const Color _secondary = Color(0xFF625B71);
-  static const Color _surface = Color(0xFFFFFBFE);
-  static const Color _onSurface = Color(0xFF1C1B1F);
-  static const Color _surfaceVariant = Color(0xFFE7E0EC);
-  static const Color _error = Color(0xFFB3261E);
+  static const Color _primary = Color(0xFFD0BCFF);
+  static const Color _onPrimary = Color(0xFF381E72);
+  static const Color _secondary = Color(0xFFCCC2DC);
+  static const Color _surface = Color(0xFF1C1B1F);
+  static const Color _onSurface = Color(0xFFE6E1E5);
+  static const Color _surfaceVariant = Color(0xFF49454F);
+  static const Color _error = Color(0xFFF2B8B5);
+  static const Color _cardColor = Color(0xFF2B2930);
+  static const Color _appBarColor = Color(0xFF211F26);
 
   static final ThemeData themeData = ThemeData(
     useMaterial3: true,
-    brightness: Brightness.light,
+    brightness: Brightness.dark,
     scaffoldBackgroundColor: _surface,
-    colorScheme: const ColorScheme.light(
+    colorScheme: const ColorScheme.dark(
       primary: _primary,
       onPrimary: _onPrimary,
       secondary: _secondary,
-      onSecondary: Colors.white,
+      onSecondary: Color(0xFF332D41),
       surface: _surface,
       onSurface: _onSurface,
       surfaceContainerHighest: _surfaceVariant,
       error: _error,
-      onError: Colors.white,
+      onError: Color(0xFF601410),
     ),
     appBarTheme: const AppBarTheme(
-      backgroundColor: _primary,
-      foregroundColor: _onPrimary,
+      backgroundColor: _appBarColor,
+      foregroundColor: _onSurface,
       elevation: 0,
       centerTitle: true,
       titleTextStyle: TextStyle(
         fontSize: 20,
         fontWeight: FontWeight.w600,
-        color: _onPrimary,
+        color: _onSurface,
       ),
-      iconTheme: IconThemeData(color: _onPrimary),
+      iconTheme: IconThemeData(color: _onSurface),
     ),
     cardTheme: CardThemeData(
-      color: Colors.white,
+      color: _cardColor,
       elevation: 2,
       margin: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
       shape: RoundedRectangleBorder(
@@ -53,7 +53,7 @@ class LightTheme {
     ),
     inputDecorationTheme: InputDecorationTheme(
       filled: true,
-      fillColor: _surfaceVariant.withValues(alpha: 0.5),
+      fillColor: _surfaceVariant.withValues(alpha: 0.35),
       contentPadding: const EdgeInsets.symmetric(horizontal: 18, vertical: 16),
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(14),
@@ -82,7 +82,7 @@ class LightTheme {
       titleLarge: TextStyle(fontSize: 20, fontWeight: FontWeight.w700, color: _onSurface),
       titleMedium: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: _onSurface),
       bodyLarge: TextStyle(fontSize: 16, color: _onSurface),
-      bodyMedium: TextStyle(fontSize: 14, color: Color(0xFF49454F)),
+      bodyMedium: TextStyle(fontSize: 14, color: Color(0xFFCAC4D0)),
       labelLarge: TextStyle(fontSize: 14, fontWeight: FontWeight.w600, color: _onPrimary),
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
@@ -97,9 +97,9 @@ class LightTheme {
       ),
     ),
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-      backgroundColor: Colors.white,
+      backgroundColor: _appBarColor,
       selectedItemColor: _primary,
-      unselectedItemColor: Color(0xFF79747E),
+      unselectedItemColor: Color(0xFF938F99),
       showUnselectedLabels: true,
       type: BottomNavigationBarType.fixed,
       elevation: 10,
