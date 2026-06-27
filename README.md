@@ -67,59 +67,32 @@ The **Overall Grade** is calculated using the class average with the same gradin
 lib/
 
 ├── main.dart                     # App entry point, sets up MultiProvider
-
 ├── app.dart                      # Root MaterialApp, wires up themes
-
 │
-
 ├── models/
-
 │   └── subject.dart              # Subject model (private _mark + grade getter)
-
 │
-
 ├── providers/
-
 │   ├── subject_provider.dart     # List<Subject>, add/remove, stats (map/where)
-
 │   ├── theme_provider.dart       # Light/Dark ThemeMode state
-
 │   └── navigation_provider.dart  # BottomNavigationBar tab index state
-
 │
-
 ├── screens/
-
 │   ├── home_screen.dart          # Hosts BottomNavigationBar + AppBar toggle
-
 │   ├── add_subject_screen.dart   # Form to add a new subject
-
 │   ├── subject_list_screen.dart  # Dismissible ListView of subjects
-
 │   └── summary_screen.dart       # Aggregate statistics dashboard
-
 │
-
 ├── widgets/
-
 │   ├── subject_card.dart         # Card UI for a single subject
-
 │   ├── custom_textfield.dart     # Reusable themed text field
-
 │   └── summary_card.dart         # Reusable stat tile
-
 │
-
 ├── themes/
-
 │   ├── light_theme.dart          # Custom Material 3 light ThemeData
-
 │   └── dark_theme.dart           # Custom Material 3 dark ThemeData
-
 │
-
 └── utils/
-
     └── validators.dart           # Form validation rules
 ```
 
@@ -204,7 +177,7 @@ The application automatically rebuilds UI through `ChangeNotifier` and `notifyLi
 Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/student-grade-tracker.git
+git clone https://github.com/shahjalal-mahmud/student_grade_tracker.git
 ```
 
 Navigate into the project
@@ -261,10 +234,9 @@ flutter run
 
 # 👨‍💻 Author
 
-**Shahajalal Mahmud**
+**Md Shahajalal Mahmud**
 
 Flutter Developer • Android Developer • UI/UX Enthusiast
 
 ---
 
-## ⭐ If you found this project useful, consider giving it a star!
